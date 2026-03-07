@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active shwapno- Login</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Helvetica, Arial, sans-serif; }
+        body { background-color: #f0f2f5; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        
+        /* ব্র্যান্ডিং */
+        .brand-name { color: #1877f2; font-size: 32px; font-weight: bold; margin: 40px 0 20px; }
+        
+        /* লগইন কন্টেইনার */
+        .login-container { background: #fff; width: 90%; max-width: 400px; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); text-align: center; }
+        
+        input { width: 100%; padding: 14px; margin-bottom: 12px; border: 1px solid #dddfe2; border-radius: 6px; font-size: 16px; background: #f5f6f7; }
+        input:focus { outline: none; border-color: #1877f2; background: #fff; }
+        
+        .login-btn { width: 100%; padding: 12px; border: none; border-radius: 6px; background-color: #1877f2; color: white; font-size: 20px; font-weight: bold; cursor: pointer; margin-bottom: 15px; }
+        
+        .forgot-password { color: #1877f2; text-decoration: none; font-size: 14px; display: block; margin-bottom: 20px; }
+        
+        .divider { border-top: 1px solid #dadde1; margin: 20px 0; position: relative; }
+        
+        .create-account-btn { background-color: #42b72a; color: white; padding: 10px 20px; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; text-decoration: none; display: inline-block; margin-top: 10px; }
+        
+        footer { margin-top: auto; padding: 20px; font-size: 12px; color: #737373; }
+    </style>
+</head>
+<body>
+
+    <!-- ব্র্যান্ডিং এরিয়া -->
+    <div class="brand-name">Active shwapno</div>
+
+    <!-- লগইন ফর্ম এরিয়া -->
+    <div class="login-container">
+        <form>
+            <input type="text" placeholder="মোবাইল নম্বর বা ইমেল" required>
+            <input type="password" placeholder="পাসওয়ার্ড" required>
+            <button type="submit" class="login-btn">লগ ইন</button>
+            <a href="#" class="forgot-password">পাসওয়ার্ড ভুলে গেছেন?</a>
+            
+            <div class="divider"></div>
+            
+            <a href="#" class="create-account-btn">নতুন অ্যাকাউন্ট তৈরি করুন</a>
+        </form>
+    </div>
+
+    <footer>
+        Active shwapno © ২০২৬
+    </footer>
+
+</body>
+</html>
